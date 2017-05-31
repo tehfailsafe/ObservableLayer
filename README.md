@@ -1,6 +1,9 @@
 # ObservableLayer for Framer
 Creates an observable object that can drive properties for a layer. This is handy for modifying one layer from aonther source that may not know the layer exsists. This keeps your code less coupled to each other and can help decrease bugs.
 
+# Syntax
+### Layer.observe(context: Object, variableName: String, animated: Boolean = false)
+
 # Example
 ```
 require "ObservableLayer"
@@ -25,5 +28,3 @@ text.observe Store, "textValue"
 Store.textValue.text = "Updated from Store!"
 
 ```
-
-### Layer.observe(context: Object, variableName: String, animated: Boolean = false)
