@@ -5,12 +5,15 @@ Creates an observable object that can drive properties for a layer. This is hand
 ```
 require "ObservableLayer"
 
+# Optionally create a generic object to store names of properties we can modify
 Store = {}
+
+# Create a layer
 Box = new Layer
   width: 100
   height: 100
  
-# setup the layer to observe changes to the Store
+# Setup the layer to observe changes to the Store
 Box.observe(Store, "boxProperties", true)
 
 # Later we can acccess the Store object and change boxProperties and the Box layer will react.
